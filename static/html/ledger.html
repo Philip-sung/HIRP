@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="../../style/bootstrap.css">
+        <link rel="stylesheet" href="../../style/app.css">
+        <script src="../../DepositWithdrawal.js"></script>
+
+        <title>HIRP</title>
+        <div id="wrap">
+          <ul>
+            <li class="fl">
+              <a class="gnb_txt" href="#">입출고관리</a>
+            </li>
+            <li class="fl">
+              <a class="gnb_txt" href="#">품목관리</a>
+            </li>
+          </ul>
+        </div>
+    </head>
+
+    <body>
+        <div class="container">
+            <h3 style="text-align: center; padding-top: 50px;">
+              입출고 현황
+            </h3>
+        
+            <div>
+              <form>
+                  <input type="text" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요">
+                  <input type="submit" value="검색" id="search_btn">
+              </form>
+            </div>
+
+            <button class="btnCrc float-right" onclick="addRow()">Create row and column</button>
+        
+            <table class="table table-bordered table-striped table-hover table-info" id="myTable">
+              <caption>List of localStorage</caption>
+              <thead class="thead-dark text-center">
+                <tr>
+                  <th>번호</th>
+                  <th>입출고 일자</th>
+                  <th>코드</th>
+                  <th>품목</th>
+                  <th>입고</th>
+                  <th>출고</th>
+                  <th>현 재고</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody class="text-center" id="htmlTbody">
+                
+              </tbody>
+            </table>
+          </div>
+    </body>
+</html>
