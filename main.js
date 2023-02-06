@@ -1,6 +1,7 @@
 'use strict';
 
 const electron = require('electron');
+const fs = require('fs');
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -24,5 +25,6 @@ app.on('ready', () => {
       }
     });
     mainWindow.loadURL(`file://${app.getAppPath()}/static/html/ledger.html`);
+    console.log('Welcome to HIRP!')
     mainWindow.on('closed', () => { mainWindow = null; });
 });
