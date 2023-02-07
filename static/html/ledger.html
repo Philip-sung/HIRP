@@ -14,15 +14,15 @@
     <nav class="navbar">
       <div class="navbar__logo">
         <img src="../../static/img/logo.jpg" width="80px" height="40px">
-        <a href="#">HIRP</a>
+        <a href="#" tabindex="-1">HIRP</a>
       </div>
       <div class="navbar__menu">
-        <li><a href="./ledger.html">입출고 관리</a></li>
-        <li><a href="./stock.html">재고 확인</a></li>
-        <li><a href="./items.html">품목 관리</a></li>
+        <li><a href="./ledger.html" tabindex="-1">입출고 관리</a></li>
+        <li><a href="./stock.html" tabindex="-1">재고 확인</a></li>
+        <li><a href="./items.html" tabindex="-1">품목 관리</a></li>
       </div>
       <div class="navbar__link">
-        <a href="#">.</a>
+        <a href="#" tabindex="-1">.</a>
       </div>
     </nav>
   
@@ -33,15 +33,15 @@
     
       <div>
         <form>
-            <input type="text" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요">
-            <input type="submit" value="검색" id="search_btn">
+            <input type="text" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요" tabindex="-1">
+            <input type="submit" value="검색" id="search_btn" tabindex="-1">
         </form>
       </div>
       <br><br>
 
 
-      <input type="text" id="dwindex" placeholder="번호" title="번호" style="width:100px" value="10">
-      <input type="date" id="now_date" name="trip-start" value="2000-01-01" min="0000-01-01" max="9999-12-31" style="width:140px">
+      <input type="text" id="dwindex" placeholder="번호" title="번호" style="width:100px" value="99" tabindex="-1">
+      <input type="date" id="now_date" name="trip-start" value="2000-01-01" min="0000-01-01" max="9999-12-31" style="width:140px" tabindex="-1">
       <input type="text" id="code" placeholder="코드" title="코드" style="width:111px">
       <input type="text" id="item" placeholder="품목" title="품목" style="width:111px">
       <input type="text" id="deposit" placeholder="입고" title="입고" style="width:111px">
@@ -51,7 +51,7 @@
       <button class="btnCrc float-right" onclick="onEditTransaction()">ADD</button>
       <br>
       <br>
-      <button class="btnCrc float-right" onclick="csvtest()">CSV log</button>
+      <button class="btnCrc float-right" onclick="test()">TEST BUTTON</button>
     
       <table class="table table-bordered table-striped table-hover table-info" id="dwTable">
         <caption>List of localStorage</caption>
@@ -65,11 +65,6 @@
             <th style="width:80px">출고</th>
             <th style="width:80px">현 재고</th>
             <th style="width:200px">비고</th>
-            <script src="../../DepositWithdrawal.js">
-              setDate();
-              setDWIndex();
-              increase();
-            </script>
           </tr>
         </thead>
         <tbody class="text-center" id="htmlTbody">
@@ -78,4 +73,9 @@
       </table>
     </div>
   </body>
+  <script src="../../DepositWithdrawal.js">
+    readfromCSV();
+    setDate();
+    setDWIndex();
+  </script>
 </html>
