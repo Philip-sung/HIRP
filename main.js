@@ -1,7 +1,7 @@
 'use strict';
 
 const electron = require('electron');
-const fs = require('fs');
+const initialize = require('./initialize')
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -25,6 +25,8 @@ app.on('ready', () => {
       }
     });
     mainWindow.loadURL(`file://${app.getAppPath()}/static/html/ledger.html`);
-    console.log('Welcome to HIRP!')
+    console.log('Welcome to HIRP!\n---')
     mainWindow.on('closed', () => { mainWindow = null; });
+    initialize.createAppdata();
+    initialize.createInitialCSV();
 });

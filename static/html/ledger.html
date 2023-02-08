@@ -40,40 +40,43 @@
       <br><br>
 
 
-      <input type="text" id="dwindex" placeholder="번호" title="번호" style="width:100px" value="99" tabindex="-1">
+      <input type="text" id="dwindex" placeholder="번호" title="번호" style="width:97px" value="99" tabindex="-1">
       <input type="date" id="now_date" name="trip-start" value="2000-01-01" min="0000-01-01" max="9999-12-31" style="width:140px" tabindex="-1">
-      <input type="text" id="code" placeholder="코드" title="코드" style="width:111px">
-      <input type="text" id="item" placeholder="품목" title="품목" style="width:111px">
-      <input type="text" id="deposit" placeholder="입고" title="입고" style="width:111px">
-      <input type="text" id="withdraw" placeholder="출고" title="출고" style="width:111px">
-      <input type="text" id="stock" placeholder="현 재고" title="현 재고" style="width:111px" disabled>
-      <input type="text" id="note" placeholder="비고" title="비고" style="width:225px">
-      <button class="btnCrc float-right" onclick="onEditTransaction()">ADD</button>
+      <input type="text" id="code" placeholder="코드" title="코드" style="width:109px">
+      <input type="text" id="item" placeholder="품목" title="품목" style="width:109px">
+      <input type="text" id="deposit" placeholder="입고" title="입고" style="width:109px">
+      <input type="text" id="withdraw" placeholder="출고" title="출고" style="width:109px">
+      <input type="text" id="stock" placeholder="현 재고" title="현 재고" style="width:109px" disabled>
+      <input type="text" id="note" placeholder="비고" title="비고" style="width:170px">
+      <button class="dwButton" onclick="onEditTransaction()">SET</button>
+      <button class="dwButton" onclick="onDeleteTransaction()" tabindex="-1">DEL</button>
       <br>
       <br>
-      <button class="btnCrc float-right" onclick="test()">TEST BUTTON</button>
-    
-      <table class="table table-bordered table-striped table-hover table-info" id="dwTable">
-        <caption>List of localStorage</caption>
-        <thead class="thead-dark text-center">
-          <tr>
-            <th style="width:70px">번호</th>
-            <th style="width:100px">입출고 일자</th>
-            <th style="width:80px">코드</th>
-            <th style="width:80px">품목</th>
-            <th style="width:80px">입고</th>
-            <th style="width:80px">출고</th>
-            <th style="width:80px">현 재고</th>
-            <th style="width:200px">비고</th>
-          </tr>
-        </thead>
-        <tbody class="text-center" id="htmlTbody">
+      <!-- <button class="btnCrc float-right" id="test" onclick="test()">TEST BUTTON</button> -->
 
-        </tbody>
-      </table>
+      <div class="div" style="overflow-y: scroll; height:500px;">
+        <table class="table table-bordered table-striped table-hover table-info" id="dwTable" >
+          <caption>List of localStorage</caption>
+          <thead class="thead-dark text-center">
+            <tr>
+              <th style="width:70px">번호</th>
+              <th style="width:100px">입출고 일자</th>
+              <th style="width:80px">코드</th>
+              <th style="width:80px">품목</th>
+              <th style="width:80px">입고</th>
+              <th style="width:80px">출고</th>
+              <th style="width:80px">현 재고</th>
+              <th style="width:200px">비고</th>
+            </tr>
+          </thead>
+          <tbody class="text-center" id="htmlTbody">
+
+          </tbody>
+        </table>
+      </div>
     </div>
   </body>
-  <script src="../../DepositWithdrawal.js">
+  <script src="../../DepositWithdrawal.js" charset="utf8">
     readfromCSV();
     setDate();
     setDWIndex();
