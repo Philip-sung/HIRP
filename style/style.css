@@ -91,3 +91,16 @@
 .dwButton:hover {
   background-color: #666;
 }
+
+.searchButton {
+  width: 80px;
+  color: #fff;
+  font-style: bold;
+  border-color: #222;
+  background-color:#222;
+  box-shadow: none;
+}
+
+.searchButton:hover {
+  background-color: #666;
+}

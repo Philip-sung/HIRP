@@ -32,10 +32,9 @@
       </h3>
     
       <div>
-        <form>
-            <input type="text" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요" tabindex="-1">
-            <input type="submit" value="검색" id="search_btn" tabindex="-1">
-        </form>
+        <input type="text" id="searchkey" placeholder="검색어를 입력하세요." title="검색어를 입력하세요" tabindex="-1">
+        <button class="searchButton" onclick="ReloadSearchResultfromCSV()" value="검색" id="search_btn" tabindex="-1">검색</button>
+        <button class="searchButton" onclick="ReloadfromCSV()" value="검색2" id="search_btn" tabindex="-1">초기화</button>
       </div>
       <br><br>
 
@@ -48,8 +47,8 @@
       <input type="text" id="withdraw" placeholder="출고" title="출고" style="width:109px">
       <input type="text" id="stock" placeholder="현 재고" title="현 재고" style="width:109px" disabled>
       <input type="text" id="note" placeholder="비고" title="비고" style="width:170px">
-      <button class="dwButton" onclick="onEditTransaction()">SET</button>
-      <button class="dwButton" onclick="onDeleteTransaction()" tabindex="-1">DEL</button>
+      <button class="dwButton" onclick="OnEditTransaction()">SET</button>
+      <button class="dwButton" onclick="OnDeleteTransaction()" tabindex="-1">DEL</button>
       <br>
       <br>
       <!-- <button class="btnCrc float-right" id="test" onclick="test()">TEST BUTTON</button> -->
@@ -77,8 +76,8 @@
     </div>
   </body>
   <script src="../../DepositWithdrawal.js" charset="utf8">
-    readfromCSV();
-    setDate();
-    setDWIndex();
+    ReadfromCSV();
+    SetDate();
+    SetDWIndex();
   </script>
 </html>

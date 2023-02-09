@@ -25,11 +25,11 @@ function createInitialCSV() {
         }) 
     }
     
-    const existledgerTemp = fs.existsSync(paths.ledgerTempCSVPath)
-    if(existledgerTemp) { console.log(`ledgerTemp.csv : ${existledgerTemp}`); }
-    else if(!existledgerTemp) { fs.open(paths.ledgerTempCSVPath, 'w', (err, fd) => {
-        fs.writeFile(paths.ledgerTempCSVPath, '\uFEFF', 'utf-8', (err, fd) => { console.log(`Content of Error Occured while creating ledgerTemp.csv : ${err}`); });
-        fs.close(fd, (err) => {console.log('ledgerTemp.csv created')})
+    const existledgerBackup = fs.existsSync(paths.ledgerBackupCSVPath)
+    if(existledgerBackup) { console.log(`ledgerBackup.csv : ${existledgerBackup}`); }
+    else if(!existledgerBackup) { fs.open(paths.ledgerBackupCSVPath, 'w', (err, fd) => {
+        fs.writeFile(paths.ledgerBackupCSVPath, '\uFEFF', 'utf-8', (err, fd) => { console.log(`Content of Error Occured while creating ledgerBackup.csv : ${err}`); });
+        fs.close(fd, (err) => {console.log('ledgerBackup.csv created')})
         }) 
     }
     
