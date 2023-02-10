@@ -60,9 +60,10 @@ function StockAggregation() {
                 'withdrawNum': withdrawNum,
                 'stock': depositNum - withdrawNum,
                 'price': 100,
-                'total': (this.depositNum - this.withdrawNum) * this.price,
+                'total': 0,
                 'note': '-'
             }
+            item.total = (depositNum - withdrawNum) * item.price;
             console.log(item)
             items.push(item);
             items.sort(function(a,b) {
