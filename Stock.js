@@ -101,3 +101,5 @@ function AddStockRow(table, item) {
     newCell6.innerHTML = item.total;
     newCell7.innerHTML = item.note;
 }
+
+StockAggregation();

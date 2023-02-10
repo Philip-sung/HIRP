@@ -6,7 +6,6 @@
       <link rel="stylesheet" href="../../style/bootstrap.css">
       <link rel="stylesheet" href="../../style/app.css">
       <link rel="stylesheet" href="../../style/style.css">
-      <script src="../../Stock.js"></script>
 
       <title>HIRP</title>
   </head>
@@ -15,15 +14,15 @@
     <nav class="navbar">
       <div class="navbar__logo">
         <img src="../../static/img/logo.jpg" width="80px" height="40px">
-        <a href="#">HIRP</a>
+        <a href="#" tabindex="-1">HIRP</a>
       </div>
       <div class="navbar__menu">
-        <li><a href="./ledger.html">입출고 관리</a></li>
-        <li><a href="./stock.html">재고 확인</a></li>
-        <li><a href="./items.html">품목 관리</a></li>
+        <li><a href="./ledger.html" tabindex="-1">입출고 관리</a></li>
+        <li><a href="./stock.html" tabindex="-1">재고 확인</a></li>
+        <li><a href="./items.html" tabindex="-1">품목 관리</a></li>
       </div>
       <div class="navbar__link">
-        <a href="#">.</a>
+        <a href="#" tabindex="-1">.</a>
       </div>
     </nav>
   
@@ -31,13 +30,7 @@
       <h3 style="text-align: center; padding-top: 50px;">
         재고 확인
       </h3>
-    
-      <div>
-        <input type="text" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요">
-        <button class="btnCrc float-right" onclick="addRow()">Create row and column</button>
-      </div>
-
-      <button class="btnCrc float-right" onclick="StockAggregation()">TEST</button>
+      <br>
     
       <table class="table table-bordered table-striped table-hover table-info" id="myTable">
         <caption>List of localStorage</caption>
@@ -54,7 +47,7 @@
           </tr>
         </thead>
         <tbody class="text-center" id="htmlTbody">
-          
+        <script src="../../Stock.js">StockAggregation()</script>
         </tbody>
       </table>
     </div>
