@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="../../style/bootstrap.css">
       <link rel="stylesheet" href="../../style/app.css">
       <link rel="stylesheet" href="../../style/style.css">
-      <script src="../../DepositWithdrawal.js"></script>
+      <script src="../../Stock.js"></script>
 
       <title>HIRP</title>
   </head>
@@ -33,25 +33,23 @@
       </h3>
     
       <div>
-        <form>
-            <input type="text" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요">
-            <input type="submit" value="검색" id="search_btn">
-        </form>
+        <input type="text" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요">
+        <button class="btnCrc float-right" onclick="addRow()">Create row and column</button>
       </div>
 
-      <button class="btnCrc float-right" onclick="addRow()">Create row and column</button>
+      <button class="btnCrc float-right" onclick="StockAggregation()">TEST</button>
     
       <table class="table table-bordered table-striped table-hover table-info" id="myTable">
         <caption>List of localStorage</caption>
         <thead class="thead-dark text-center">
           <tr>
-            <th>번호</th>
-            <th>입출고 일자</th>
             <th>코드</th>
             <th>품목</th>
-            <th>입고</th>
-            <th>출고</th>
+            <th>총 입고</th>
+            <th>총 출고</th>
             <th>현 재고</th>
+            <th>단가</th>
+            <th>재고 총액</th>
             <th>비고</th>
           </tr>
         </thead>
