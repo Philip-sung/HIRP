@@ -6,7 +6,6 @@
       <link rel="stylesheet" href="../../style/bootstrap.css">
       <link rel="stylesheet" href="../../style/app.css">
       <link rel="stylesheet" href="../../style/style.css">
-      <script src="../../Stock.js"></script>
 
       <title>HIRP</title>
   </head>
@@ -32,12 +31,27 @@
         재고 확인
       </h3>
     
-      <div>
-        <input type="text" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요">
-        <button class="btnCrc float-right" onclick="addRow()">Create row and column</button>
+      <div class="menuWrapper">
+        <ul class="stockCode">
+            <li class="menu">A(전기)
+              <ul class="subMenu">
+                  <li>AA-전기</li>
+                  <li>AB-농사</li>
+                  <li>AC-건축</li>
+              </ul> 
+            </li>
+            <li class="menu">B(건축)
+              <ul class="subMenu">
+                  <li>BA-구조</li>
+                  <li>BB-마감</li>
+                  <li>BC-미장</li>
+              </ul>
+            </li>
+            <li class="menu">C(농사)</li>
+            <li class="menu">D(청소)</li>
+            <li class="menu">E(잡품)</li>   
+        </ul class="stockCode">
       </div>
-
-      <button class="btnCrc float-right" onclick="StockAggregation()">TEST</button>
     
       <table class="table table-bordered table-striped table-hover table-info" id="myTable">
         <caption>List of localStorage</caption>
@@ -54,6 +68,10 @@
           </tr>
         </thead>
         <tbody class="text-center" id="htmlTbody">
+          
+        <script src="../../Stock.js">
+          StockAggregation();
+        </script>
           
         </tbody>
       </table>
